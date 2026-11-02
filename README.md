@@ -158,13 +158,16 @@ bus-dispatch-analytics/
 │   ├── 03_visualization.py         # 分析图表生成
 │   ├── 04_dispatch_optimization.py # 调度优化计算
 │   ├── 05_prediction_gui.py        # PyQt5 预测调度桌面系统
-│   └── run_all.py                  # 一键跑通全部流程
+│   ├── run_all.py                  # 一键跑通全部流程
+│   └── tools/
+│       └── split_large_csv.py      # 超大 CSV 流式切分工具（处理 1.2 GB 原始流水）
 ├── figures/                    # 结果图表（README 中展示）
 │   └── dispatch/               # 调度优化专项图表
 ├── models/                     # 训练产物（.gitignore 排除，脚本自动生成）
 ├── dashboard/                  # Smartbi 看板复现指南（HTML 静态页）
 ├── docs/
 │   ├── 代码说明.md              # 各脚本详细说明与执行流程
+│   ├── 整合说明.md              # 从 2.5 GB 交付包到本仓库的取舍记录
 │   └── reports/                # 完整分析报告、答辩演示
 └── data/
     ├── aggregated_data_full.csv.gz  # 聚合数据集（419,045 条 × 13 列）
@@ -223,6 +226,7 @@ python src/04_dispatch_optimization.py  # → figures/dispatch/*.png
 | 文档 | 说明 |
 | :--- | :--- |
 | [`docs/代码说明.md`](docs/代码说明.md) | 六个脚本的输入输出、执行依赖、模型指标 |
+| [`docs/整合说明.md`](docs/整合说明.md) | 从 2.5 GB 竞赛交付包到本仓库的文件取舍记录 |
 | [`docs/reports/项目报告.docx`](docs/reports/) | 完整数据分析报告（含全部 35 张图表） |
 | [`docs/reports/答辩演示.pptx`](docs/reports/) | 答辩演示文稿 |
 | [`dashboard/index.html`](dashboard/index.html) | Smartbi 看板搭建与操作指南 |
